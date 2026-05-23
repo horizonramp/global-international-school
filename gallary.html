@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <title>picture gallary</title>
+</head>
+<body>
+  <div class="srt">
+     <h1 style="font-size: 30px;text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">KD PUBLIC SCHOOL</h1><br>
+    </div>
+    <nav class="menu">
+      <a class="btn" href="">Photos</a>
+      <a class="btn"  href="">Albums</a>
+      <a class="btn"  href="">Video</a>
+    </nav><br>
+            <div class="image-gallery">
+  <div class="image-box"><img class="img" src="image01.jpg" alt="School Event"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image02.jpg" alt="School Building"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image03.jpg" alt="Sports Activity"></div>
+  <div class="image-box"><img class="img" src="file:///C:/Users/SHILENDRA/Documents/image02.jpg" alt="School Event"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image02.jpg" alt="School Building"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image03.jpg" alt="Sports Activity"></div>
+  <div class="image-box"><img class="img" src="" alt="School Event"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image02.jpg" alt="School Building"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image03.jpg" alt="Sports Activity"></div>
+  <div class="image-box"><img class="img" src="" alt="School Event"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image02.jpg" alt="School Building"></div>
+  <div class="image-box"><img class="img" src="c:\Users\SHILENDRA\Documents\image03.jpg" alt="Sports Activity"></div>
+</div><br>
+
+
+
+            
+            <style>
+                body{
+                    justify-content: center;
+                    text-align: center;
+                    background:linear-gradient(rgb(121, 199, 121),chocolate);
+                }
+                .image-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  width: 395px;
+  height: 300px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+            .img{
+                transition: 0.2s ease;
+            }
+.img:hover{
+    transform: scale(1.2);
+}
+.srt{
+  border: 2px solid black;
+  border-radius: 10px;
+  background: linear-gradient(240deg,aqua,green,blue);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.menu{
+  border: 1.5px solid black;
+  border-radius: 30px;
+  background: linear-gradient(230deg,green,aqua);
+  padding:10px;
+
+}
+.btn{
+  margin-right: 100px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+  transition: all 0.2s ease-in-out;
+  padding: 3px 8px;
+}
+.btn:hover{
+  background:linear-gradient(240deg,chocolate,blue);
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  transform: 1.2;
+}
+@keyframes moveright{
+  from{0px left}to{200px right}
+}
+</style>
+</body>

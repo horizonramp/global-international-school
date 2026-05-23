@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KD PUBLIC SCHOOL</title>
+  
+</head>
+<body>
+    <body>
+  <header class="school-header">
+    <h1>KD Public School</h1>
+    <p class="tagline">One right decison can change your child's life</p>
+   
+  </header>
+</body>
+</html>
+<div class="ht">
+  <div class="slider">
+    <input type="radio" name="slide" id="s1" checked>
+    <input type="radio" name="slide" id="s2">
+    <input type="radio" name="slide" id="s3">
+    <input type="radio" name="slide" id="s4">
+
+    <div class="slides">
+      <div class="slide"><img src="school.png" alt=""></div>
+      <div class="slide"><img src="IMG-20260208-WA0036 (2).jpg" alt=""></div>
+      <div class="slide"><img src="IMG-20260208-WA0052 (2).jpg" alt=""></div>
+      <div class="slide"><img src="IMG-20260208-WA0003 (2).jpg" alt=""></div>
+    </div>
+
+    <div class="controls">
+      <label for="s4" class="prev"></label>
+      <label for="s2" class="next"></label>
+
+      <label for="s1" class="prev"></label>
+      <label for="s3" class="next"></label>
+
+      <label for="s2" class="prev"></label>
+      <label for="s4" class="next"></label>
+
+      <label for="s3" class="prev"></label>
+      <label for="s1" class="next"></label>
+    </div>
+
+    <div class="dots">
+      <label for="s1"></label>
+      <label for="s2"></label>
+      <label for="s3"></label>
+      <label for="s4"></label>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
+<style>
+  body {
+  margin: 0;
+  background:white;
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.ht {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.school-header {
+  background: linear-gradient(135deg, #004aad, #0077ff);
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: 3px solid blue;
+
+ 
+}
+
+.school-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.school-header .tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0.9;
+}
+.slider {
+  position: relative;
+  margin-top: 20px;
+  width:100%;
+  height: 450px;
+  overflow: hidden;
+  border:2px solid #111;
+  border-radius: 10px;
+  box-shadow:2px #111;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 100%;
+  height: 450px;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#s1:checked ~ .slides { transform: translateX(0); }
+#s2:checked ~ .slides { transform: translateX(-100%); }
+#s3:checked ~ .slides { transform: translateX(-200%); }
+#s4:checked ~ .slides { transform: translateX(-300%); }
+
+.controls label {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background:black;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.next {
+  right: 10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+#s1:checked ~ .controls label:nth-child(1),
+#s1:checked ~ .controls label:nth-child(2) { display: block; }
+
+#s2:checked ~ .controls label:nth-child(3),
+#s2:checked ~ .controls label:nth-child(4) { display: block; }
+
+#s3:checked ~ .controls label:nth-child(5),
+#s3:checked ~ .controls label:nth-child(6) { display: block; }
+
+#s4:checked ~ .controls label:nth-child(7),
+#s4:checked ~ .controls label:nth-child(8) { display: block; }
+
+.controls label { display: none; }
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dots label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #666;
+  cursor: pointer;
+}
+
+#s1:checked ~ .dots label:nth-child(1),
+#s2:checked ~ .dots label:nth-child(2),
+#s3:checked ~ .dots label:nth-child(3),
+#s4:checked ~ .dots label:nth-child(4) {
+  background: blue;
+}
+</style>
+
+
+</style>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-bottom: 60px; 
+      background: #111;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      position: fixed;
+      margin-bottom:20px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background:rgba(170, 163, 163, 0.342);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    }
+.bottom-nav a.active {
+  color:blue; 
+}
+    .bottom-nav a {
+      color:white;
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .bottom-nav a:hover {
+      color:blue;
+    }
+
+    .bottom-nav i {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="bottom-nav">
+    <a href="Home tab (1).html"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="" class="active"><i class="fas fa-image"></i><span>Gallary</span></a>
+    <a href="sar.html"><i class="fas fa-images"></i><span>photos</span></a>
+    <a href=""><i class="fas fa-video"></i><span>Video</span></a>
+    <a href=""><i class="fas fa-folder"></i><span>Albums</span></a>
+  </div>
+
+  <div class="gallery">
+    <div class="box"><a href="#img1"><img src="IMG-20260208-WA0003 (2).jpg"></a></div>
+    <div class="box"><a href="#img2"><img src="IMG-20260208-WA0028 (2).jpg"></a></div>
+    <div class="box"><a href="#img3"><img src="image03.jpg"></a></div>
+    <div class="box"><a href="#img4"><img src="image02.jpg"></a></div>
+    <div class="box"><a href="#img5"><img src="image02.jpg"></a></div>
+    <div class="box"><a href="#img6"><img src="school.png"></a></div>
+    <div class="box"><a href="#img7"><img src="image03.jpg"></a></div>
+    <div class="box"><a href="#img8"><img src="image02.jpg"></a></div>
+    <div class="box"><a href="#img9"><img src="image03.jpg"></a></div>
+    <div class="box"><a href="#img10"><img src="school.png"></a></div>
+    <div class="box"><a href="#img11"><img src="school.png"></a></div>
+    <div class="box"><a href="#img12"><img src="image02.jpg"></a></div>
+  </div>
+
+  
+  <div id="img1" class="lightbox"><a href="#">❌</a><img src="IMG-20260208-WA0003 (2).jpg"></div>
+  <div id="img2" class="lightbox"><a href="#">❌</a><img src="IMG-20260208-WA0028 (2).jpg"></div>
+  <div id="img3" class="lightbox"><a href="#">❌</a><img src="image03.jpg"></div>
+  <div id="img4" class="lightbox"><a href="#">❌</a><img src="image02.jpg"></div>
+  <div id="img5" class="lightbox"><a href="#">❌</a><img src="image02.jpg"></div>
+  <div id="img6" class="lightbox"><a href="#">❌</a><img src="school.png"></div>
+  <div id="img7" class="lightbox"><a href="#">❌</a><img src="image03.jpg"></div>
+  <div id="img8" class="lightbox"><a href="#">❌</a><img src="image02.jpg"></div>
+  <div id="img9" class="lightbox"><a href="#">❌</a><img src="image03.jpg"></div>
+  <div id="img10" class="lightbox"><a href="#">❌</a><img src="school.png"></div>
+  <div id="img11" class="lightbox"><a href="#">❌</a><img src="school.png"></div>
+  <div id="img12" class="lightbox"><a href="#">❌</a><img src="image02.jpg"></div>
+
+
+  <div class="bottom-nav">
+    <a href="Home tab (1).html" ><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="best gallary.html" class="active"><i class="fas fa-image"></i><span>Gallary</span></a>
+    <a href="sar.html"><i class="fas fa-images"></i><span>Photos</span></a>
+    <a href="" ><i class="fas fa-video"></i><span>Video</span></a>
+    <a href="" ><i class="fas fa-folder"></i><span>Albums</span></a>
+  </div>
+
+</body>
+</html>
+<style>
+  
+.gallery {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.box {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.box:hover { transform: scale(1.05); }
+.box img {
+  width: 100%;
+  height: 250px;       
+  object-fit: cover;   
+  display: grid;
+  border: 2px solid grey;
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+   height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index:1   ;
+
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 4px solid white;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.lightbox:target { display: flex; }
+.lightbox a {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color:white;
+  font-size: 30px;
+  text-decoration: none;
+}
+</style>
+</body>
+</html>
+
